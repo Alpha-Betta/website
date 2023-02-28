@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #dc7405;
+}
+
+body{
+    background: #241301;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+main{
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+
+
+.menu-item{
+    background: #241301;
+    color: #dc7405;
+    border: 2px solid #dc7405;
+}
+
+.menu-item:hover{
+    background: #dc7405;
+    color: #241301;
+}
+
+.menu-button > span,
+.menu-button > span::before,
+.menu-button > span::after {
+    background: #dc7405;
+}
+
+
+
+
+/* Главная информация раздела */
+
+
+
+
+.topic{
+    width: 240px;
+    left: calc(50% - 120px);
+    background-image: linear-gradient(45deg,#FFC719, #BF033B);
+    margin-bottom: 20px;
+}
+
+.general-information{
+    border: 2px solid #dc7405;
+    border-radius: 40px;
+    position: relative;
+    background-color: rgba(36, 19, 1, 0.8);
+    backdrop-filter: blur(10px);
+    transform: translate(-100%, 0);
+    opacity: 0;
+    transition: all 0.9s ease-in-out 0s;
+}
+
+.general-information.anim{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.definition{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+
+.definition > p{
+    font-family: segoe script;
+    border-radius: 20px;
+    padding: 10px;
+}   
+
+.definition > aside > p > q{
+    color:aliceblue;
+}
+
+aside > cite{
+    color:aliceblue;
+    align-self: flex-end;
+}
+
+.definition aside{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Segoe UI';
+    border-left: 2px solid #dc7405;
+    box-shadow: 0 0px 10px #dc7405;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.general-information + section{
+    position: relative;
+    font-family: cursive;
+    width: 90%;
+    border: 2px solid #dc7405;
+    border-radius: 40px;
+    left: 5%;
+    padding-bottom: 10px;
+}
+
+.general-information + section > p{
+    padding: 10px 20px;
+}
+
+.general-information + section > ul{
+    list-style: circle;
+    margin-left: 50px;
+}
+
+
+
+
+/* Карточки */
+
+
+
+.some-fact h4{
+    font-family: consolas;
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #FE5858, #EE9617);
+    top: -30px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+    background-color: rgba(255, 138, 43, 0.4);
+    width: 280px;
+    height: 400px;
+    margin: 20px;
+    box-shadow: 0px 0px 20px rgba(255, 138, 43, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1.75s ease-in-out 0s;
+    border: 2px solid #dc7405;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+.card.anim{
+    opacity: 1;
+}
+
+.face{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.face2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face.face1{
+    box-sizing: border-box;
+}
+
+.face.face2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% - 2px);
+    height: 100%;
+    border: 2px solid #dc7405;
+    border-right: 0;
+    border-bottom: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.face.face2::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(50% - 2px);
+    height: 100%;
+    border: 2px solid #dc7405;
+    border-left: 0;
+    border-bottom: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card:nth-child(1) .face.face2::before,
+.card:nth-child(3) .face.face2::before,
+.card:nth-child(5) .face.face2::before,
+.card:nth-child(7) .face.face2::before,
+.card:nth-child(2) .face.face2::after,
+.card:nth-child(4) .face.face2::after,
+.card:nth-child(6) .face.face2::after{
+    background-color: #dc740537;
+}
+
+.card:nth-child(2) .face.face2::before,
+.card:nth-child(4) .face.face2::before,
+.card:nth-child(6) .face.face2::before,
+.card:nth-child(1) .face.face2::after,
+.card:nth-child(3) .face.face2::after,
+.card:nth-child(5) .face.face2::after,
+.card:nth-child(7) .face.face2::after{
+    background-color: #24130188;
+}
+
+.face.face2{
+    background: #241301;
+    transition: 0.5s;
+    font-size: 160px;
+    color: rgba(255, 138, 43, 0.4);
+}
+
+.card:hover .face.face2{
+    height: 60px;
+    font-size: 32px;
+    color: #dc7405;
+}
+
+.card-content p{
+    font-family: consolas;
+    text-align: center;
+    padding: 5px;
+    color: aliceblue;
+    font-size: 14px;
+}
+
+
+/* Ссылки на тематический контент */
+
+
+
+
+.reference a{
+    background: #241301;
+    color: rgb(220, 116, 5);
+    border: 2px solid #dc7405;
+}
+
+.reference a:hover{
+    background: #dc7405;
+    color: #241301;
+}
+
+
+
+
+/*Ссылки на соцсети*/
+
+
+
+
+
+.social-icons a {
+    background: #241301;
+    box-shadow: 0 0px 10px #dc7405;
+}
+
+.social-icons a:after {
+    background:#241301;
+}
+
+.social-icons a:hover:after {
+    background: #dc7405;
+}
+
+
+
+
+/*Адаптация*/
+
+
+
+
+
+@media (max-width: 734px) {
+
+    .general-item:hover{
+        background: #241301;
+        color: #dc7405;
+    }
+
+    .menu{
+        background: #241301;
+    }
+
+
+
+    /* Главная информация раздела */
+
+
+
+    .general-information{
+        margin: 30px;
+    }
+
+    .general-information{
+        top: -100px;
+    }
+
+    .general-information + section{
+        position: relative;
+        top: -50px;
+    }
+    
+    .definition > p,
+    .general-information + section{
+        font-size: 13px;
+    }
+
+    .definition > p{
+        margin: 10px;
+    }
+
+    .definition > aside{
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    .general-information + section > p{
+        padding: 5px 10px;
+    }
+    
+    .general-information + section > ul{
+        margin-left: 30px;
+    }
+
+
+
+    /* Карточки */
+
+
+
+
+    
+}
+
+@media (min-width: 735px) and (max-width: 1068px) {
+
+    .general-item:hover{
+        background: #241301;
+        color: #dc7405;
+    }
+
+    .menu{
+        background: #241301;
+    }
+
+
+
+    /* Главная информация раздела */
+
+
+
+    
+    .general-information{
+        margin: 60px;
+    }
+
+    .general-information{
+        top: -180px;
+    }
+
+    .general-information + section{
+        top: -120px;
+    }
+
+    .definition > p,
+    .general-information + section{
+        font-size: 17px;
+    }
+
+    .definition > p{
+        margin: 20px;
+    }
+    
+
+
+
+    /* Карточки */
+
+
+
+
+    
+}
+
+@media (min-width: 1069px){
+
+
+
+    /* Главная информация раздела */
+
+
+
+    .general-information{
+        margin: 90px;
+    }
+
+    .general-information{
+        top: -300px;
+    }
+
+    .general-information + section{
+        top: -230px;
+    }
+
+    .definition > p,
+    .general-information + section{
+        font-size: 20px;
+    }
+
+    .definition > p{
+        margin: 30px;
+    }
+
+
+
+
+    /* Карточки */
+
+
+
+
+
+}

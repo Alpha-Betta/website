@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #9c05ed;
+}
+
+h3{
+    font-family: cursive;
+}
+
+body{
+    background: #260239;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+.screensaver > img{
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+main{
+    overflow: hidden;
+}
+
+
+/* Меню */
+
+
+
+.menu-item{
+    background: #260239;
+    color: #9c05ed;
+    border: 2px solid #9c05ed;
+}
+
+.menu-item:hover{
+    background: #9c05ed;
+    color: #260239;
+}
+
+.menu-button > span,
+.menu-button > span::before,
+.menu-button > span::after {
+    background: #9c05ed;
+}
+
+
+
+/* Главная информация раздела */
+
+
+
+
+.topic{
+    width: 300px;
+    left: calc(50% - 155px);
+    background-image: linear-gradient(45deg,#5F0A87, #A4508B);
+}
+
+.general-information{
+    width: 80%;
+    position: relative;
+    left: calc(10% - 5.5px);
+    border: 2px solid #9c05ed;
+    background: #26023993;
+    border-radius: 30px;
+    transform: translate(-100%, 0);
+    opacity: 0;
+    transition: all 1.5s ease-in-out 0s;
+    z-index: 7;
+}
+
+.general-information.anim{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.definition > p{
+    font-family: segoe script;
+    border-radius: 20px;
+    margin: 10px;
+}   
+
+.definition > aside > p > q{
+    color:aliceblue;
+}
+
+aside > cite{
+    color:aliceblue;
+    align-self: flex-end;
+}
+
+.definition aside{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Segoe UI';
+    border-left: 2px solid #9c05ed;
+    box-shadow: 0 0px 10px #9c05ed;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.general-information + section{
+    padding: 20px;
+    font-family: cursive;
+    position: relative;
+    width: 80%;
+    left: calc(10% - 20px);
+    border: 2px solid #9c05ed;
+    border-radius: 40px;
+    transform: translate(100%, 0);
+    opacity: 0;
+    transition: all 1s ease-in-out 0s;
+    padding-bottom: 30px;
+}
+
+.general-information + section ul{
+    padding: 20px;
+}
+
+.general-information + section.anim{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+
+
+/* Раздел факт */
+
+
+
+.some-fact{
+    font-family: consolas;
+    margin-top: 40px;
+    position: relative;
+    left: calc(10% - 20px);
+    width: 80%;
+    border: 2px solid #9c05ed;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+
+.some-fact h4{
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #5F72BE, #9921E8);
+}
+
+
+
+
+
+
+/* Ссылки на тематический контент */
+
+
+
+
+
+.reference a{
+    background: #260239;
+    color: #9c05ed;
+    border: 2px solid #9c05ed;
+}
+
+.reference a:hover{
+    background: #9c05ed;
+    color: #260239;
+}
+
+
+
+
+/*Ссылки на соцсети*/
+
+
+
+
+
+.social-icons a {
+    background: #260239;
+    box-shadow: 0 0px 10px #9c05ed;
+}
+
+.social-icons a:after {
+    background:#260239;
+}
+
+.social-icons a:hover:after {
+    background: #9c05ed;
+}
+
+
+
+
+/*Адаптация*/
+
+
+
+
+
+@media (max-width: 734px) {
+
+    .general-item:hover{
+        background: #260239;
+        color: #9c05ed;
+    }
+
+    .menu{
+        background: #260239;
+    }
+
+
+
+    /* Главная информация раздела */
+
+
+
+
+    .definition{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .general-information{
+        top: -50px;
+    }
+    
+
+
+
+    /* Карточки */
+
+
+}
+
+@media (min-width: 735px) and (max-width: 1068px) {
+
+    .general-item:hover{
+        background: #260239;
+        color: #9c05ed;
+    }
+
+    .menu{
+        background: #260239;
+    }
+
+
+
+    /* Главная информация раздела */
+
+
+
+    .definition{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+        margin: 25px
+    }
+
+    .general-information{
+        top: -100px;
+    }
+
+}
+
+@media (min-width: 1069px){
+
+
+
+    /* Главная информация раздела */
+
+
+
+    .definition{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+        margin: 25px
+    }
+
+    .general-information{
+        top: -150px;
+    }
+
+
+
+    /* Карточки */
+
+
+
+
+}

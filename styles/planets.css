@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #0dd19d;
+}
+
+h3{
+    font-family: cursive;
+}
+
+body{
+    background: #032a1f;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+.screensaver > img{
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+
+
+/* Меню */
+
+
+
+.menu-item{
+    background: #032a1f;
+    color: #0dd19d;
+    border: 2px solid #0dd19d;
+}
+
+.menu-item:hover{
+    background: #0dd19d;
+    color: #032a1f;
+}
+
+.menu-button > span,
+.menu-button > span::before,
+.menu-button > span::after {
+    background: #0dd19d;
+}
+
+
+/* Главная информация раздела */
+
+
+
+
+.topic{
+    width: 310px;
+    left: calc(50% - 155px);
+    background-image: linear-gradient(45deg,#26F596, #0499F2);
+}
+
+.general-information{
+    position: relative;
+    background-color: rgba(3, 42, 31, 0.8);
+    backdrop-filter: blur(10px);
+    transform: translate(0, 100%);
+    opacity: 0;
+    transition: all 0.9s ease-in-out 0s;
+    width: 70%;
+    left: 15%;
+    border: 1px solid #0dd19d;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.general-information.anim{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+.definition > p{
+    font-family: segoe script;
+}
+
+.definition aside{
+    font-family: 'Segoe UI';
+    margin: 20px;
+}
+
+.definition > aside > p > q{
+    color:aliceblue;
+}
+
+aside > cite{
+    color:aliceblue;
+}
+
+.definition aside{
+    border-left: 2px solid #0dd19d;
+    box-shadow: 0 0px 10px #0dd19d;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+}
+
+.general-information + section{
+    position: relative;
+}
+
+.general-information + section p,
+.general-information + section ul{
+    font-family: cursive;
+    margin: 20px
+}
+
+.general-information + section ul{
+    padding-left: 70px;
+    list-style: disc;
+}
+
+
+
+
+/* Раздел факт */
+
+
+
+
+.some-fact{
+    padding-left: 5px;
+}
+
+article:nth-child(2) .some-fact > p{
+    margin: 20px;
+    text-align: center;
+    color: #2EFFC3;
+    font-family: cursive;
+    font-size: 18px;
+}
+
+article:nth-child(2) .some-fact > h3{
+    margin: 20px;
+    text-align: center;
+    color: #2EFFC3;
+    font-family: consolas;
+    font-size: 30px;
+}
+
+
+
+
+/* Карточки */
+
+
+
+
+.some-fact h4{
+    position: relative;
+    font-family: consolas;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #22c1c3, #fdbb2d);
+}
+
+.card{
+    height: 450px;
+    width: 300px;
+    margin: 10px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px double #2EFFC3;
+    font-family: consolas;
+}
+
+.card > h2,
+.card > p{
+    margin: 10px
+}
+
+.card:nth-child(1){
+    background-color: rgba(207, 207, 249, 0.2);
+    transform: translate(-100%, 0);
+    opacity: 0;
+    transition: all 0.9s ease-in-out 0s;
+}
+
+.card:nth-child(2){
+    background-color: rgba(246, 225, 186, 0.2);
+    transform: translate(100%, 0);
+    opacity: 0;
+    transition: all 0.9s ease-in-out 0s;
+}
+
+.card.anim{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card-stats{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    list-style: none;
+    height: 70px;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+}
+
+.card-stats li{
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #032a1f;
+    background-color: #2EFFC3;
+    padding: 0 30px;
+}
+
+button:hover{
+    border: #2EFFC3;
+    background-color: #032a1f;
+}
+
+.comment{
+    background-color: white;
+    width: 40px;
+    height: 30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.heart{
+    height: auto;
+    width: auto;
+}
+
+.Lheart {
+    position: relative;
+    top: 12px;
+    right: 5px;
+    content: '';
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(-45deg);
+}
+
+.Rheart {
+    position: relative;
+    bottom: 18px;
+    left: 5px;
+    content: '';
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(45deg);
+}
+
+.heart-count,
+.comment-count {
+    color: rgb(120, 120, 120);
+    font-size: 25px;
+}
+
+
+
+
+
+/* Ссылки на тематический контент */
+
+
+
+
+
+.reference a{
+    background: #032a1f;
+    color: #0dd19d;
+    border: 2px solid #0dd19d;
+}
+
+.reference a:hover{
+    background: #0dd19d;
+    color: #032a1f;
+}
+
+
+
+
+/*Ссылки на соцсети*/
+
+
+
+
+
+.social-icons a {
+    background: #032a1f;
+    box-shadow: 0 0px 10px #0dd19d;
+}
+
+.social-icons a:after {
+    background:#032a1f;
+}
+
+.social-icons a:hover:after {
+    background: #0dd19d;
+}
+
+
+
+
+/*Адаптация*/
+
+
+
+
+
+@media (max-width: 734px) {
+
+    .general-item:hover{
+        background: #032a1f;
+        color: #0dd19d;
+    }
+
+    .menu{
+        background: #032a1f;
+    }
+
+
+
+    /* Главная информация раздела */
+
+
+
+    .general-information{
+        top: -100px;
+    }
+
+    .general-information + section{
+        position: relative;
+        top: -50px;
+    }
+
+    .definition > p,
+    .general-information + section{
+        font-size: 13px;
+    }
+    
+
+
+
+    /* Карточки */
+
+
+
+
+    .some-fact h4{
+        top: -30px;
+    }
+}
+
+@media (min-width: 735px) and (max-width: 1068px) {
+
+    .general-item:hover{
+        background: #032a1f;
+        color: #0dd19d;
+    }
+
+    .menu{
+        background: #032a1f;
+    }
+
+
+
+    /* Главная информация раздела */
+
+
+
+    .general-information{
+        top: -180px;
+    }
+
+    .general-information + section{
+        top: -120px;
+    }
+
+    .definition > p,
+    .general-information + section{
+        font-size: 17px;
+    }
+    
+
+
+
+    /* Карточки */
+
+
+
+
+    .some-fact h4{
+        top: -40px;
+    }
+}
+
+@media (min-width: 1069px){
+
+
+
+    /* Главная информация раздела */
+
+
+
+    .general-information{
+        top: -300px;
+    }
+
+    .general-information + section{
+        top: -230px;
+    }
+
+    .definition > p,
+    .general-information + section{
+        font-size: 20px;
+    }
+
+
+
+
+    /* Карточки */
+
+
+
+
+    .some-fact h4{
+        top: -50px;
+    }
+}

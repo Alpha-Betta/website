@@ -1,0 +1,414 @@
+*{
+    color: #281c04;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: cursive;
+}
+
+body{
+    background-color: #f4d5a6;
+    position: static;
+}
+
+
+
+/* Меню */
+
+
+
+.menu-item{
+    background: #f4d5a6;
+    color: #281c04;
+    border: 2px solid #281c04;
+}
+
+.menu-item:hover{
+    background: #281c04;
+    color: #f4d5a6;
+}
+
+.menu-button > span,
+.menu-button > span::before,
+.menu-button > span::after {
+    background: #281c04;
+}
+
+
+
+
+
+
+/* Ссылки на картинки, видео и форму регистрации */
+
+
+
+
+
+
+.reference a{
+    color: #281c04;
+    border: 2px solid #281c04;
+    background:#020115;
+}
+
+.reference a:hover{
+    background: #281c04;
+    color: #f4d5a6;
+}
+
+
+
+.box{ 
+    overflow: hidden;
+}
+
+.pictures{
+    display: flex;
+    position: static;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.pictures > img{
+    position:relative;
+    border-radius: 30px;
+}
+
+.pictures img:nth-child(3){
+    width: 50%;
+    z-index: 3;
+    left: -35%;
+}
+
+.pictures img:nth-child(2),
+.pictures img:nth-child(4){
+    width: 35%;
+    z-index: 2;
+    left: -16%;
+    filter: blur(2px);
+}
+
+.pictures img:nth-child(1),
+.pictures img:nth-child(5){
+    width: 25%;
+    z-index: 1;
+    left: 1%;
+    filter: blur(4px);
+}
+
+.pictures img:nth-child(6){
+    width: 15%;
+    z-index: 0;
+}
+
+.pictures img:nth-child(4)
+{
+    left: -55%;
+}
+
+.pictures img:nth-child(5){
+    left: -71%
+}
+
+.pictures img:nth-child(6){
+    left: -81%;
+    opacity: 0;
+}
+
+.pictures .shift:nth-child(1){
+    animation: first-picture-shift ease-in-out 1s;
+}
+
+.pictures .shift:nth-child(2){
+    animation: second-picture-shift ease-in-out 1s;
+}
+
+.pictures .shift:nth-child(3){
+    animation: third-picture-shift ease-in-out 1s;
+}
+
+.pictures .shift:nth-child(4){
+    animation: fourth-picture-shift ease-in-out 1s;
+}
+
+.pictures .shift:nth-child(5){
+    animation: fifth-picture-shift ease-in-out 1s;
+}
+
+.pictures .shift:nth-child(6){
+    animation: sixth-picture-shift ease-in-out 1s;
+}
+
+
+
+
+.pictures .shift-reverse:nth-child(1){
+    animation: first-picture-shift ease-in-out 1s reverse;
+}
+
+.pictures .shift-reverse:nth-child(2){
+    animation: second-picture-shift ease-in-out 1s reverse;
+}
+
+.pictures .shift-reverse:nth-child(3){
+    animation: third-picture-shift ease-in-out 1s reverse;
+}
+
+.pictures .shift-reverse:nth-child(4){
+    animation: fourth-picture-shift ease-in-out 1s reverse;
+}
+
+.pictures .shift-reverse:nth-child(5){
+    animation: fifth-picture-shift ease-in-out 1s reverse;
+}
+
+.pictures .shift-reverse:nth-child(6){
+    animation: sixth-picture-shift ease-in-out 1s reverse;
+}
+
+
+
+@keyframes first-picture-shift {
+    0%{
+        left: 1%;
+        width: 25%;
+        opacity: 1;
+        filter: blur(4px);
+    }
+    100%{
+        left: -9%;
+        width: 15%;
+        filter: blur(8px);
+        z-index: 0;
+        opacity: 0;
+        border: 0;
+    }
+}
+
+@keyframes second-picture-shift {
+    0%{
+        left: -16%;
+        width: 35%;
+        filter: blur(2px);   
+    }
+    100%{
+        left: -14%;
+        width: 25%;
+        z-index: 1;
+        filter: blur(4px);
+    }
+}
+
+@keyframes third-picture-shift {
+    0%{
+        left: -35%;
+        width: 50%;
+    }
+    100%{
+        left: -31%;
+        width: 35%;
+        z-index: 2;
+        filter: blur(2px);
+    }
+}
+
+@keyframes fourth-picture-shift {
+    0%{
+        left: -55%;
+        width: 35%;
+        filter: blur(2px);
+    }
+    76%{
+        z-index: 3;
+    }
+    100%{
+        left: -50%;
+        width: 50%;
+        z-index: 3;
+        filter: none;
+    }
+}
+
+@keyframes fifth-picture-shift {
+    0%{
+        left: -71%;
+        width: 25%;
+        filter: blur(4px);
+    }
+    100%{
+        left: -70%;
+        width: 35%;
+        z-index: 2;
+        filter: blur(2px);
+    }
+}
+
+@keyframes sixth-picture-shift {
+    0%{
+        left: -81%;
+        width: 15%;
+        opacity: 0;
+        filter: blur(8px);
+    }
+    100%{
+        left: -86%;
+        width: 25%;
+        z-index: 1;
+        opacity: 1;
+        filter: blur(4px);
+    }
+}
+
+.previous,
+.next{
+    position: relative;
+    border-style: none;
+    border-radius: 100%;
+    background-color: #f4d5a670;
+    color: #281c04;
+    font-family: "Californian FB";
+    z-index: 4;
+}
+
+.previous:hover,
+.next:hover{
+    border-color: #f4d5a6;
+    background-color: #281c0470;
+    color: #f4d5a6;
+}
+
+.invisible{
+    animation: invis ease-in-out 1s;
+}
+
+@keyframes invis {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*Ссылки на соцсети*/
+
+
+
+
+
+.social-icons a {
+    background: #f4d5a6;
+    box-shadow: 0 0px 15px #281c04;
+}
+
+.social-icons a:after {
+    background:#020115;
+}
+
+.social-icons a:hover:after {
+    background: #281c04;
+}
+
+@media (max-width: 734px){
+
+    .general-item:hover{
+        background: #f4d5a6;
+        color: #281c04;
+    }
+
+    .menu{
+        background: #f4d5a6;
+    }
+
+
+
+
+    .pictures{
+        height: 40vh;
+    }
+
+    .previous,
+    .next{
+        top: calc(-20vh - 15px);
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        border: 1px solid #281c04;
+    }
+
+    .previous{
+        left: calc(25% - 15px);
+    }
+    
+    .next{
+        left: calc(75% - 49px);
+    }
+}
+
+@media (min-width: 734px) and (max-width: 1068px){
+
+    .general-item:hover{
+        background: #f4d5a6;
+        color: #281c04;
+    }
+
+    .menu{
+        background: #f4d5a6;
+    }
+
+
+
+    .pictures{
+        height: 55vh;
+    }
+
+    .previous,
+    .next{
+        top: calc(-27.5vh - 22.5px);
+        width: 45px;
+        height: 45px;
+        font-size: 30px;
+        border: 4px double #281c04;
+    }
+
+    .previous{
+        left: calc(25% - 22.5px);
+    }
+    
+    .next{
+        left: calc(75% - 71.5px);
+    }
+}
+
+@media (min-width: 1068px){
+    .pictures{
+        height: 75vh;
+    }
+
+
+
+    .previous,
+    .next{
+        top: calc(-37.5vh - 27.5px);
+        width: 55px;
+        height: 55px;
+        font-size: 40px;
+        border: 6px double #281c04;
+    }
+
+    .previous{
+        left: calc(25% - 27.5px);
+    }
+    
+    .next{
+        left: calc(75% - 86.5px);
+    }
+}

@@ -1,0 +1,80 @@
+*{
+    color: #cd306f;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: cursive;
+}
+
+body{
+    background-color: #2e0616;
+}
+
+
+
+/* Меню */
+
+
+
+.menu-item{
+    background: #2e0616;
+    color: #cd306f;
+    border: 2px solid #cd306f;
+}
+
+.menu-item:hover{
+    background: #cd306f;
+    color: #2e0616;
+}
+
+.menu-button > span,
+.menu-button > span::before,
+.menu-button > span::after {
+    background: #cd306f;
+}
+
+
+
+
+/* Ссылки на картинки, видео и форму регистрации */
+
+
+
+
+
+
+.reference a{
+    color: #cd306f;
+    border: 2px solid #cd306f;
+    background:#020115;
+}
+
+.reference a:hover{
+    background: #cd306f;
+    color: #2e0616;
+}
+
+
+
+
+
+/*Ссылки на соцсети*/
+
+
+
+
+
+.social-icons a {
+    background: #2e0616;
+    box-shadow: 0 0px 10px #cd306f;
+}
+
+.social-icons a:after {
+    background:#020115;
+}
+
+.social-icons a:hover:after {
+    background: #cd306f;
+}
