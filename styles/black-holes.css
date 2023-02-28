@@ -115,19 +115,11 @@ aside > cite{
     left: calc(10% - 20px);
     border: 2px solid #9c05ed;
     border-radius: 40px;
-    transform: translate(100%, 0);
-    opacity: 0;
-    transition: all 1s ease-in-out 0s;
     padding-bottom: 30px;
 }
 
 .general-information + section ul{
     padding: 20px;
-}
-
-.general-information + section.anim{
-    transform: translate(0, 0);
-    opacity: 1;
 }
 
 
