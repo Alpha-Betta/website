@@ -230,6 +230,8 @@ aside > cite{
 
     .general-information{
         top: -50px;
+        opacity: 1;
+        transform: translate(0, 0);
     }
     
 
