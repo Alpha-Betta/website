@@ -63,6 +63,7 @@ body{
 
 .definition > aside{
     width: 250px;
+    margin: 5px;
     padding: 10px;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
